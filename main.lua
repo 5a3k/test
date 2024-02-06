@@ -27,7 +27,9 @@ local bypass = {
     ["z"] = "z",
 }
 
+local TCS = game:GetService("TextChatService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
+local Channel = TCS.TextChannels.RBXGeneral
 
 local function gen(txt)
     local new = ""
@@ -41,24 +43,22 @@ local function gen(txt)
     return new
 end
 
-local TCS = game:GetService("TextChatService")
 TCS.OnIncomingMessage = function(msg)
     local Owner = tostring(msg.TextSource)
     local Prop = Instance.new("TextChatMessageProperties")
     if Owner == LocalPlayer.Name then
         Prop.Text = gen(msg.Text)
     else
-        Prop.Text = msg.Text
+        --Prop.Text = msg.Text
+        break
     end
     print(Prop.Text)
     return Prop
 end
 
-TCS.MessageReceived:Connect(function(message)
-    local author = tostring(message.TextSource)
-    local channels = TCS.TextChannels
-    local gen = channels.RBXGeneral
-    if author == LocalPlayer.Name then
-        gen:SendAsync(message.Text)
+TCS.MessageReceived:Connect(function(msg)
+    local Owner = tostring(msg.TextSource)
+    if Owner == LocalPlayer.Name then
+        Channel:SendAsync(msg.Text)
     end
 end)
