@@ -53,3 +53,10 @@ TCS.OnIncomingMessage = function(msg)
     print(Prop.Text)
     return Prop
 end
+
+TCS.MessageReceived:Connect(function(message)
+    local author = tostring(message.TextSource)
+    local channels = TCS.TextChannels
+    local gen = channels.RBXGeneral
+    gen:SendAsync(message.Text)
+end)
