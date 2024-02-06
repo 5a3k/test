@@ -47,8 +47,8 @@ local Old = nil
 TCS.OnIncomingMessage = function(msg)
     local Owner = tostring(msg.TextSource)
     local Prop = Instance.new("TextChatMessageProperties")
-    if Owner == LocalPlayer.Name and msg.Text:sub(1, 1) == "." then
-        Old = msg.Text:sub(2, msg.Text:len())
+    if Owner == LocalPlayer.Name and not Old then
+        Old = msg
         Prop.Text = " "
     else
         Prop.Text = msg.Text
