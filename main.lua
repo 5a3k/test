@@ -27,30 +27,29 @@ local bypass = {
     ["z"] = "z",
 }
 
-local function gen(txt)
-local new = ""
-for _,letter in next, txt:split("") do
-if bypass[letter] then
-new = new .. bypass[letter]
-else
-new = new .. letter
-end
-end
-return new
-end
-
 local LocalPlayer = game:GetService("Players").LocalPlayer
+
+local function gen(txt)
+    local new = ""
+    for _,letter in next, txt:split("") do
+        if bypass[letter] then
+            new = new .. bypass[letter]
+        else
+            new = new .. letter
+        end
+    end
+    return new
+end
 
 local TCS = game:GetService("TextChatService")
 TCS.OnIncomingMessage = function(msg)
-local Owner = tostring(msg.TextSource)
-if Owner == LocalPlayer.Name then
-local Prop = Instance.new("TextChatMessageProperties")
-Prop.Text = gen(msg.Text)
-return Prop
-else
-local Prop = Instance.new("TextChatMessageProperties")
-Prop.Text = msg.Text
-return Prop
-end
+    local Owner = tostring(msg.TextSource)
+    local Prop = Instance.new("TextChatMessageProperties")
+    if Owner == LocalPlayer.Name then
+        Prop.Text = gen(msg.Text)
+    else
+        Prop.Text = msg.Text
+    end
+    print(Prop.Text)
+    return Prop
 end
