@@ -50,7 +50,7 @@ TCS.OnIncomingMessage = function(msg)
     if Owner == LocalPlayer.Name and not Old then
         Old = msg
         Prop.Text = " "
-    else
+    elseif not Old then
         Prop.Text = msg.Text
     end
     return Prop
@@ -59,7 +59,7 @@ end
 TCS.MessageReceived:Connect(function(msg)
     local Owner = tostring(msg.TextSource)
     if Owner == LocalPlayer.Name then
-        Channel:SendAsync(gen(Old))
+        Channel:SendAsync(gen(Old.Text))
         Old = nil
     end
 end)
