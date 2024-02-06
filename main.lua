@@ -28,7 +28,6 @@ local bypass = {
 }
 
 local TCS = game:GetService("TextChatService")
-local LocalPlayer = game:GetService("Players").LocalPlayer
 local Channel = TCS.TextChannels.RBXGeneral
 
 local function gen(txt)
@@ -43,25 +42,4 @@ local function gen(txt)
     return new
 end
 
-local Old = nil
-TCS.OnIncomingMessage = function(msg)
-    local Owner = tostring(msg.TextSource)
-    local Prop = Instance.new("TextChatMessageProperties")
-    if Owner == LocalPlayer.Name and not Old then
-        Old = msg
-        Prop.Text = " "
-    elseif not Old then
-        Prop.Text = msg.Text
-    else
-        Old = nil
-        Prop.Text = msg.Text
-    end
-    return Prop
-end
-
-TCS.MessageReceived:Connect(function(msg)
-    local Owner = tostring(msg.TextSource)
-    if Owner == LocalPlayer.Name then
-        Channel:SendAsync(gen(Old.Text))
-    end
-end)
+Channel:SendAsync(gen("porn"))
