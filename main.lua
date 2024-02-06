@@ -58,5 +58,7 @@ TCS.MessageReceived:Connect(function(message)
     local author = tostring(message.TextSource)
     local channels = TCS.TextChannels
     local gen = channels.RBXGeneral
-    gen:SendAsync(message.Text)
+    if author == LocalPlayer.Name then
+        gen:SendAsync(message.Text)
+    end
 end)
