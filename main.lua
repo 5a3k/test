@@ -1,30 +1,5 @@
 local bypass = {
-    ["a"] = "а",
-    ["b"] = "b",
-    ["c"] = "с",
-    ["d"] = "d",
-    ["e"] = "е",
-    ["f"] = "f",
-    ["g"] = "g",
-    ["h"] = "һ",
-    ["i"] = "і",
-    ["j"] = "ј",
-    ["k"] = "k",
-    ["l"] = "ӏ",
-    ["m"] = "m",
-    ["n"] = "n",
-    ["o"] = "о",
-    ["p"] = "р",
-    ["q"] = "q",
-    ["r"] = "r",
-    ["s"] = "ѕ",
-    ["t"] = "t",
-    ["u"] = "u",
-    ["v"] = "v",
-    ["w"] = "w",
-    ["x"] = "х",
-    ["y"] = "у",
-    ["z"] = "z",
+    -- Your character replacement mapping
 }
 
 local TCS = game:GetService("TextChatService")
@@ -33,7 +8,7 @@ local Channel = TCS.TextChannels.RBXGeneral
 
 local function gen(txt)
     local new = ""
-    for _,letter in next, txt:split("") do
+    for _, letter in next, txt:split("") do
         if bypass[letter] then
             new = new .. bypass[letter]
         else
@@ -47,12 +22,14 @@ local Old = nil
 TCS.OnIncomingMessage = function(msg)
     local Owner = tostring(msg.TextSource)
     local Prop = Instance.new("TextChatMessageProperties")
-    if Owner == LocalPlayer.Name then
+
+    if Owner == LocalPlayer.Name and not Old then
         Old = gen(msg.Text)
         Prop.Text = " "
     else
         Prop.Text = msg.Text
     end
+
     return Prop
 end
 
