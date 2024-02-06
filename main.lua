@@ -47,7 +47,7 @@ local Old = nil
 TCS.OnIncomingMessage = function(msg)
     local Owner = tostring(msg.TextSource)
     local Prop = Instance.new("TextChatMessageProperties")
-    if Owner == LocalPlayer.Name then
+    if Owner == LocalPlayer.Name and not Old then
         Old = gen(msg.Text)
         Prop.Text = " "
     else
@@ -58,7 +58,7 @@ end
 
 TCS.MessageReceived:Connect(function(msg)
     local Owner = tostring(msg.TextSource)
-    if Owner == LocalPlayer.Name and not Old then
+    if Owner == LocalPlayer.Name and Old then
         Channel:SendAsync(Old)
         Old = nil
     end
