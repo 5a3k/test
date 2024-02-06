@@ -50,7 +50,7 @@ TCS.OnIncomingMessage = function(msg)
         Prop.Text = gen(msg.Text)
     else
         --Prop.Text = msg.Text
-        break
+        return
     end
     print(Prop.Text)
     return Prop
