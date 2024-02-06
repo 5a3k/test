@@ -49,7 +49,7 @@ TCS.OnIncomingMessage = function(msg)
     local Prop = Instance.new("TextChatMessageProperties")
     if Owner == LocalPlayer.Name then
         Old = gen(msg.Text)
-        Prop.Text = ""
+        Prop.Text = " "
     else
         Prop.Text = msg.Text
     end
