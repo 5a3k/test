@@ -59,6 +59,7 @@ end
 TCS.MessageReceived:Connect(function(msg)
     local Owner = tostring(msg.TextSource)
     if Owner == LocalPlayer.Name then
+        print(msg.Text)
         Channel:SendAsync(msg.Text)
     end
 end)
