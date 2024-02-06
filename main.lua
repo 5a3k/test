@@ -43,23 +43,23 @@ local function gen(txt)
     return new
 end
 
+local Old = nil
 TCS.OnIncomingMessage = function(msg)
     local Owner = tostring(msg.TextSource)
     local Prop = Instance.new("TextChatMessageProperties")
     if Owner == LocalPlayer.Name then
-        Prop.Text = gen(msg.Text)
+        Old = gen(msg.Text)
+        Prop.Text = ""
     else
-        --Prop.Text = msg.Text
-        return
+        Prop.Text = msg.Text
     end
-    print(Prop.Text)
     return Prop
 end
 
 TCS.MessageReceived:Connect(function(msg)
     local Owner = tostring(msg.TextSource)
-    if Owner == LocalPlayer.Name then
-        print(msg.Text)
-        Channel:SendAsync(msg.Text)
+    if Owner == LocalPlayer.Name and Old then
+        Channel:SendAsync(Old)
+        Old = nil
     end
 end)
