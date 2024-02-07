@@ -1,6 +1,5 @@
 local fake_module_scripts = {}
 
-game:GetService("Chat").ChatMain:Destroy()
 do -- nil.ChatMain
 	local script = Instance.new('ModuleScript', game:GetService("Chat"))
 	script.Name = "ChatMain"
