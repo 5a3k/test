@@ -1,9 +1,10 @@
 local fake_module_scripts = {}
 
-game:GetService("Chat").ChatScript:Destroy()
+game:GetService("Chat").ChatMain:Destroy()
 do -- nil.ChatMain
-	local script = Instance.new('ModuleScript', nil)
+	local script = Instance.new('ModuleScript', game:GetService("Chat"))
 	script.Name = "ChatMain"
+	local chatmain = script
 	local function module_script()
 		--!nonstrict
 		
@@ -1205,7 +1206,7 @@ do -- nil.ChatMain
 	fake_module_scripts[script] = module_script
 end
 do -- nil.ChatChannel
-	local script = Instance.new('ModuleScript', nil)
+	local script = Instance.new('ModuleScript', chatmain)
 	script.Name = "ChatChannel"
 	local function module_script()
 		--!nonstrict
@@ -1419,7 +1420,7 @@ do -- nil.ChatChannel
 	fake_module_scripts[script] = module_script
 end
 do -- nil.ChannelsTab
-	local script = Instance.new('ModuleScript', nil)
+	local script = Instance.new('ModuleScript', chatmain)
 	script.Name = "ChannelsTab"
 	local function module_script()
 		--!nonstrict
@@ -1738,7 +1739,7 @@ do -- nil.ChannelsTab
 	fake_module_scripts[script] = module_script
 end
 do -- nil.ObjectPool
-	local script = Instance.new('ModuleScript', nil)
+	local script = Instance.new('ModuleScript', chatmain)
 	script.Name = "ObjectPool"
 	local function module_script()
 		--	// FileName: ObjectPool.lua
@@ -1796,7 +1797,7 @@ do -- nil.ObjectPool
 	fake_module_scripts[script] = module_script
 end
 do -- nil.CommandProcessor
-	local script = Instance.new('ModuleScript', nil)
+	local script = Instance.new('ModuleScript', chatmain)
 	script.Name = "CommandProcessor"
 	local function module_script()
 		--!nonstrict
@@ -1875,7 +1876,7 @@ do -- nil.CommandProcessor
 	fake_module_scripts[script] = module_script
 end
 do -- nil.CurveUtil
-	local script = Instance.new('ModuleScript', nil)
+	local script = Instance.new('ModuleScript', chatmain)
 	script.Name = "CurveUtil"
 	local function module_script()
 		--!nonstrict
@@ -1962,7 +1963,7 @@ do -- nil.CurveUtil
 	fake_module_scripts[script] = module_script
 end
 do -- nil.ChannelsBar
-	local script = Instance.new('ModuleScript', nil)
+	local script = Instance.new('ModuleScript', chatmain)
 	script.Name = "ChannelsBar"
 	local function module_script()
 		--!nonstrict
@@ -2369,7 +2370,7 @@ do -- nil.ChannelsBar
 	fake_module_scripts[script] = module_script
 end
 do -- nil.MessageLogDisplay
-	local script = Instance.new('ModuleScript', nil)
+	local script = Instance.new('ModuleScript', chatmain)
 	script.Name = "MessageLogDisplay"
 	local function module_script()
 		--!nonstrict
@@ -2733,7 +2734,7 @@ do -- nil.MessageLogDisplay
 	fake_module_scripts[script] = module_script
 end
 do -- nil.MessageLabelCreator
-	local script = Instance.new('ModuleScript', nil)
+	local script = Instance.new('ModuleScript', chatmain)
 	script.Name = "MessageLabelCreator"
 	local function module_script()
 		--!nonstrict
@@ -2900,7 +2901,7 @@ do -- nil.MessageLabelCreator
 	fake_module_scripts[script] = module_script
 end
 do -- nil.MessageSender
-	local script = Instance.new('ModuleScript', nil)
+	local script = Instance.new('ModuleScript', chatmain)
 	script.Name = "MessageSender"
 	local function module_script()
 		--	// FileName: MessageSender.lua
@@ -2942,7 +2943,7 @@ do -- nil.MessageSender
 	fake_module_scripts[script] = module_script
 end
 do -- nil.ChatBar
-	local script = Instance.new('ModuleScript', nil)
+	local script = Instance.new('ModuleScript', chatmain)
 	script.Name = "ChatBar"
 	local function module_script()
 		--!nonstrict
@@ -3561,7 +3562,7 @@ do -- nil.ChatBar
 	fake_module_scripts[script] = module_script
 end
 do -- nil.ChatWindow
-	local script = Instance.new('ModuleScript', nil)
+	local script = Instance.new('ModuleScript', chatmain)
 	script.Name = "ChatWindow"
 	local function module_script()
 		--!nonstrict
@@ -4417,3 +4418,4 @@ local function QVBCUAA_fake_script() -- ScreenGui.ChatScript
 	
 end
 coroutine.wrap(QVBCUAA_fake_script)()
+game:GetService("Chat").ChatScript:Destroy()
