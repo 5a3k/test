@@ -1,8 +1,8 @@
 local fake_module_scripts = {}
 
-game:GetService("Chat").ChatMain:Destroy()
+game:GetService("Chat").ChatScript:Destroy()
 do -- nil.ChatMain
-	local script = Instance.new('ModuleScript', game:GetService("Chat"))
+	local script = Instance.new('ModuleScript', nil)
 	script.Name = "ChatMain"
 	local function module_script()
 		--!nonstrict
@@ -4246,7 +4246,7 @@ end
 -- Scripts:
 
 local function QVBCUAA_fake_script() -- ScreenGui.ChatScript 
-	local script = Instance.new('LocalScript', ScreenGui)
+	local script = Instance.new('LocalScript', game:GetService("Chat"))
 	local req = require
 	local require = function(obj)
 		local fake = fake_module_scripts[obj]
