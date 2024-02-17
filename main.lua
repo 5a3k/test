@@ -11,7 +11,7 @@
 local G2L = {};
 
 -- StarterGui.Banking System
-G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"));
 G2L["1"]["DisplayOrder"] = 999;
 G2L["1"]["Name"] = [[Banking System]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
