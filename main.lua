@@ -7,11 +7,11 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER
 ]=]
 
--- Instances: 87 | Scripts: 4 | Modules: 0
+-- Instances: 89 | Scripts: 4 | Modules: 0
 local G2L = {};
 
 -- StarterGui.Banking System
-G2L["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"));
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["DisplayOrder"] = 999;
 G2L["1"]["Name"] = [[Banking System]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
@@ -109,6 +109,7 @@ G2L["c"] = Instance.new("LocalScript", G2L["8"]);
 -- StarterGui.Banking System.BACKGROUNDUI.InformationFrame.welcome
 G2L["d"] = Instance.new("TextLabel", G2L["8"]);
 G2L["d"]["TextWrapped"] = true;
+G2L["d"]["TextScaled"] = true;
 G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["d"]["TextSize"] = 30;
@@ -143,6 +144,7 @@ G2L["11"]["AspectRatio"] = 1.4721407890319824;
 -- StarterGui.Banking System.BACKGROUNDUI.InformationFrame.PlayerName
 G2L["12"] = Instance.new("TextLabel", G2L["8"]);
 G2L["12"]["TextWrapped"] = true;
+G2L["12"]["TextScaled"] = true;
 G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["12"]["TextSize"] = 30;
@@ -151,7 +153,7 @@ G2L["12"]["Size"] = UDim2.new(0.2990429103374481, 0, 0.11370262503623962, 0);
 G2L["12"]["Text"] = [[Name]];
 G2L["12"]["Name"] = [[PlayerName]];
 G2L["12"]["BackgroundTransparency"] = 1;
-G2L["12"]["Position"] = UDim2.new(0.4497833847999573, 0, 0.17784257233142853, 0);
+G2L["12"]["Position"] = UDim2.new(0.47748297452926636, 0, 0.17784255743026733, 0);
 
 -- StarterGui.Banking System.BACKGROUNDUI.InformationFrame.PlayerName.UITextSizeConstraint
 G2L["13"] = Instance.new("UITextSizeConstraint", G2L["12"]);
@@ -450,66 +452,60 @@ G2L["36"]["AspectRatio"] = 1.4635568857192993;
 
 -- StarterGui.Banking System.BACKGROUNDUI.WithdrawFrame.TextLabel
 G2L["37"] = Instance.new("TextLabel", G2L["33"]);
+G2L["37"]["TextWrapped"] = true;
 G2L["37"]["BorderSizePixel"] = 0;
+G2L["37"]["TextScaled"] = true;
 G2L["37"]["BackgroundColor3"] = Color3.fromRGB(25, 25, 25);
 G2L["37"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["37"]["TextSize"] = 14;
 G2L["37"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["37"]["Size"] = UDim2.new(0, 477, 0, 50);
+G2L["37"]["Size"] = UDim2.new(0.9342629313468933, 0, 0.14577259123325348, 0);
 G2L["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["37"]["Text"] = [[@xploits_ for ui]];
-G2L["37"]["Position"] = UDim2.new(0, 0, 0.19825072586536407, 0);
+G2L["37"]["Position"] = UDim2.new(0.0007095640758052468, 0, 0.19587667286396027, 0);
+
+-- StarterGui.Banking System.BACKGROUNDUI.WithdrawFrame.TextLabel.UITextSizeConstraint
+G2L["38"] = Instance.new("UITextSizeConstraint", G2L["37"]);
+G2L["38"]["MaxTextSize"] = 14;
 
 -- StarterGui.Banking System.BACKGROUNDUI.WithdrawFrame.TextLabel
-G2L["38"] = Instance.new("TextLabel", G2L["33"]);
-G2L["38"]["BorderSizePixel"] = 0;
-G2L["38"]["BackgroundColor3"] = Color3.fromRGB(25, 25, 25);
-G2L["38"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["38"]["TextSize"] = 14;
-G2L["38"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["38"]["Size"] = UDim2.new(0, 477, 0, 50);
-G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["38"]["Text"] = [[@userhater for scripts]];
-G2L["38"]["Position"] = UDim2.new(0, 0, 0.3206997215747833, 0);
+G2L["39"] = Instance.new("TextLabel", G2L["33"]);
+G2L["39"]["TextWrapped"] = true;
+G2L["39"]["BorderSizePixel"] = 0;
+G2L["39"]["TextScaled"] = true;
+G2L["39"]["BackgroundColor3"] = Color3.fromRGB(25, 25, 25);
+G2L["39"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["39"]["TextSize"] = 14;
+G2L["39"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["39"]["Size"] = UDim2.new(0.9342629313468933, 0, 0.14577259123325348, 0);
+G2L["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["39"]["Text"] = [[@userhater for scripts]];
+G2L["39"]["Position"] = UDim2.new(0.0007095640758052468, 0, 0.3183257579803467, 0);
+
+-- StarterGui.Banking System.BACKGROUNDUI.WithdrawFrame.TextLabel.UITextSizeConstraint
+G2L["3a"] = Instance.new("UITextSizeConstraint", G2L["39"]);
+G2L["3a"]["MaxTextSize"] = 14;
 
 -- StarterGui.Banking System.BACKGROUNDUI.Information
-G2L["39"] = Instance.new("TextButton", G2L["2"]);
-G2L["39"]["TextWrapped"] = true;
-G2L["39"]["RichText"] = true;
-G2L["39"]["TextScaled"] = true;
-G2L["39"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["39"]["TextSize"] = 13;
-G2L["39"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["39"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["39"]["Size"] = UDim2.new(0.12011367827653885, 0, 0.046000078320503235, 0);
-G2L["39"]["Name"] = [[Information]];
-G2L["39"]["Text"] = [[info]];
-G2L["39"]["Position"] = UDim2.new(0.0720125138759613, 0, 0.35953545570373535, 0);
-G2L["39"]["BackgroundTransparency"] = 1;
-
--- StarterGui.Banking System.BACKGROUNDUI.Information.UITextSizeConstraint
-G2L["3a"] = Instance.new("UITextSizeConstraint", G2L["39"]);
-G2L["3a"]["MaxTextSize"] = 13;
-
--- StarterGui.Banking System.BACKGROUNDUI.Transactions
 G2L["3b"] = Instance.new("TextButton", G2L["2"]);
 G2L["3b"]["TextWrapped"] = true;
+G2L["3b"]["RichText"] = true;
 G2L["3b"]["TextScaled"] = true;
 G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["3b"]["TextSize"] = 13;
 G2L["3b"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["3b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3b"]["Size"] = UDim2.new(0.11818959563970566, 0, 0.07653889805078506, 0);
-G2L["3b"]["Name"] = [[Transactions]];
-G2L["3b"]["Text"] = [[bypass]];
-G2L["3b"]["Position"] = UDim2.new(0.0720125138759613, 0, 0.5590823292732239, 0);
+G2L["3b"]["Size"] = UDim2.new(0.12011367827653885, 0, 0.046000078320503235, 0);
+G2L["3b"]["Name"] = [[Information]];
+G2L["3b"]["Text"] = [[info]];
+G2L["3b"]["Position"] = UDim2.new(0.0720125138759613, 0, 0.35953545570373535, 0);
 G2L["3b"]["BackgroundTransparency"] = 1;
 
--- StarterGui.Banking System.BACKGROUNDUI.Transactions.UITextSizeConstraint
+-- StarterGui.Banking System.BACKGROUNDUI.Information.UITextSizeConstraint
 G2L["3c"] = Instance.new("UITextSizeConstraint", G2L["3b"]);
-G2L["3c"]["MaxTextSize"] = 14;
+G2L["3c"]["MaxTextSize"] = 13;
 
--- StarterGui.Banking System.BACKGROUNDUI.Withdraw
+-- StarterGui.Banking System.BACKGROUNDUI.Transactions
 G2L["3d"] = Instance.new("TextButton", G2L["2"]);
 G2L["3d"]["TextWrapped"] = true;
 G2L["3d"]["TextScaled"] = true;
@@ -517,118 +513,116 @@ G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["3d"]["TextSize"] = 13;
 G2L["3d"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["3d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3d"]["Size"] = UDim2.new(0.11818959563970566, 0, 0.056934162974357605, 0);
-G2L["3d"]["Name"] = [[Withdraw]];
-G2L["3d"]["Text"] = [[credits]];
-G2L["3d"]["Position"] = UDim2.new(0.0720125138759613, 0, 0.878905177116394, 0);
+G2L["3d"]["Size"] = UDim2.new(0.11818959563970566, 0, 0.07653889805078506, 0);
+G2L["3d"]["Name"] = [[Transactions]];
+G2L["3d"]["Text"] = [[bypass]];
+G2L["3d"]["Position"] = UDim2.new(0.0720125138759613, 0, 0.5590823292732239, 0);
 G2L["3d"]["BackgroundTransparency"] = 1;
 
--- StarterGui.Banking System.BACKGROUNDUI.Withdraw.UITextSizeConstraint
+-- StarterGui.Banking System.BACKGROUNDUI.Transactions.UITextSizeConstraint
 G2L["3e"] = Instance.new("UITextSizeConstraint", G2L["3d"]);
-G2L["3e"]["MaxTextSize"] = 16;
+G2L["3e"]["MaxTextSize"] = 14;
 
--- StarterGui.Banking System.BACKGROUNDUI.ACTIONS
-G2L["3f"] = Instance.new("TextLabel", G2L["2"]);
+-- StarterGui.Banking System.BACKGROUNDUI.Withdraw
+G2L["3f"] = Instance.new("TextButton", G2L["2"]);
 G2L["3f"]["TextWrapped"] = true;
 G2L["3f"]["TextScaled"] = true;
 G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3f"]["TextSize"] = 13;
 G2L["3f"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["3f"]["TextSize"] = 15;
-G2L["3f"]["TextColor3"] = Color3.fromRGB(48, 48, 48);
-G2L["3f"]["Size"] = UDim2.new(0.30034103989601135, 0, 0.043462928384542465, 0);
-G2L["3f"]["Active"] = true;
-G2L["3f"]["Text"] = [[script]];
-G2L["3f"]["Name"] = [[ACTIONS]];
+G2L["3f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3f"]["Size"] = UDim2.new(0.11818959563970566, 0, 0.056934162974357605, 0);
+G2L["3f"]["Name"] = [[Withdraw]];
+G2L["3f"]["Text"] = [[credits]];
+G2L["3f"]["Position"] = UDim2.new(0.0720125138759613, 0, 0.878905177116394, 0);
 G2L["3f"]["BackgroundTransparency"] = 1;
-G2L["3f"]["Position"] = UDim2.new(-0.11330702900886536, 0, 0.2503963112831116, 0);
 
--- StarterGui.Banking System.BACKGROUNDUI.ACTIONS.UITextSizeConstraint
+-- StarterGui.Banking System.BACKGROUNDUI.Withdraw.UITextSizeConstraint
 G2L["40"] = Instance.new("UITextSizeConstraint", G2L["3f"]);
-G2L["40"]["MaxTextSize"] = 12;
+G2L["40"]["MaxTextSize"] = 16;
 
--- StarterGui.Banking System.BACKGROUNDUI.Information Icon
+-- StarterGui.Banking System.BACKGROUNDUI.ACTIONS
 G2L["41"] = Instance.new("TextLabel", G2L["2"]);
 G2L["41"]["TextWrapped"] = true;
 G2L["41"]["TextScaled"] = true;
 G2L["41"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["41"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["41"]["TextSize"] = 30;
-G2L["41"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["41"]["Size"] = UDim2.new(0.04947468265891075, 0, 0.08426939696073532, 0);
+G2L["41"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["41"]["TextSize"] = 15;
+G2L["41"]["TextColor3"] = Color3.fromRGB(48, 48, 48);
+G2L["41"]["Size"] = UDim2.new(0.30034103989601135, 0, 0.043462928384542465, 0);
 G2L["41"]["Active"] = true;
-G2L["41"]["Text"] = [[]];
-G2L["41"]["Name"] = [[Information Icon]];
+G2L["41"]["Text"] = [[script]];
+G2L["41"]["Name"] = [[ACTIONS]];
 G2L["41"]["BackgroundTransparency"] = 1;
-G2L["41"]["Position"] = UDim2.new(0.01566636562347412, 0, 0.3404008150100708, 0);
+G2L["41"]["Position"] = UDim2.new(-0.11330702900886536, 0, 0.2503963112831116, 0);
+
+-- StarterGui.Banking System.BACKGROUNDUI.ACTIONS.UITextSizeConstraint
+G2L["42"] = Instance.new("UITextSizeConstraint", G2L["41"]);
+G2L["42"]["MaxTextSize"] = 12;
+
+-- StarterGui.Banking System.BACKGROUNDUI.Information Icon
+G2L["43"] = Instance.new("TextLabel", G2L["2"]);
+G2L["43"]["TextWrapped"] = true;
+G2L["43"]["TextScaled"] = true;
+G2L["43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["43"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["43"]["TextSize"] = 30;
+G2L["43"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["43"]["Size"] = UDim2.new(0.04947468265891075, 0, 0.08426939696073532, 0);
+G2L["43"]["Active"] = true;
+G2L["43"]["Text"] = [[]];
+G2L["43"]["Name"] = [[Information Icon]];
+G2L["43"]["BackgroundTransparency"] = 1;
+G2L["43"]["Position"] = UDim2.new(0.01566636562347412, 0, 0.3404008150100708, 0);
 
 -- StarterGui.Banking System.BACKGROUNDUI.Information Icon.UITextSizeConstraint
-G2L["42"] = Instance.new("UITextSizeConstraint", G2L["41"]);
-G2L["42"]["MaxTextSize"] = 24;
+G2L["44"] = Instance.new("UITextSizeConstraint", G2L["43"]);
+G2L["44"]["MaxTextSize"] = 24;
 
 -- StarterGui.Banking System.BACKGROUNDUI.Information Icon.fluency_icon
-G2L["43"] = Instance.new("ImageLabel", G2L["41"]);
-G2L["43"]["BorderSizePixel"] = 0;
-G2L["43"]["ScaleType"] = Enum.ScaleType.Fit;
-G2L["43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["43"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["43"]["Image"] = [[rbxassetid://11422155687]];
-G2L["43"]["Size"] = UDim2.new(0.8691299557685852, 0, 0.9932060241699219, 0);
-G2L["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["43"]["Name"] = [[fluency_icon]];
-G2L["43"]["BackgroundTransparency"] = 1;
-G2L["43"]["Position"] = UDim2.new(0.37456533312797546, 0, 0.4949858784675598, 0);
+G2L["45"] = Instance.new("ImageLabel", G2L["43"]);
+G2L["45"]["BorderSizePixel"] = 0;
+G2L["45"]["ScaleType"] = Enum.ScaleType.Fit;
+G2L["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["45"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["45"]["Image"] = [[rbxassetid://11422155687]];
+G2L["45"]["Size"] = UDim2.new(0.8691299557685852, 0, 0.9932060241699219, 0);
+G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["45"]["Name"] = [[fluency_icon]];
+G2L["45"]["BackgroundTransparency"] = 1;
+G2L["45"]["Position"] = UDim2.new(0.37456533312797546, 0, 0.4949858784675598, 0);
 
 -- StarterGui.Banking System.BACKGROUNDUI.Deposit Icon
-G2L["44"] = Instance.new("TextLabel", G2L["2"]);
-G2L["44"]["TextWrapped"] = true;
-G2L["44"]["TextScaled"] = true;
-G2L["44"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["44"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["44"]["TextSize"] = 30;
-G2L["44"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["44"]["Size"] = UDim2.new(0.05483187735080719, 0, 0.08426939696073532, 0);
-G2L["44"]["Active"] = true;
-G2L["44"]["Text"] = [[]];
-G2L["44"]["Name"] = [[Deposit Icon]];
-G2L["44"]["BackgroundTransparency"] = 1;
-G2L["44"]["Position"] = UDim2.new(0.010309251956641674, 0, 0.7066932320594788, 0);
+G2L["46"] = Instance.new("TextLabel", G2L["2"]);
+G2L["46"]["TextWrapped"] = true;
+G2L["46"]["TextScaled"] = true;
+G2L["46"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["46"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["46"]["TextSize"] = 30;
+G2L["46"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["46"]["Size"] = UDim2.new(0.05483187735080719, 0, 0.08426939696073532, 0);
+G2L["46"]["Active"] = true;
+G2L["46"]["Text"] = [[]];
+G2L["46"]["Name"] = [[Deposit Icon]];
+G2L["46"]["BackgroundTransparency"] = 1;
+G2L["46"]["Position"] = UDim2.new(0.010309251956641674, 0, 0.7066932320594788, 0);
 
 -- StarterGui.Banking System.BACKGROUNDUI.Deposit Icon.UITextSizeConstraint
-G2L["45"] = Instance.new("UITextSizeConstraint", G2L["44"]);
-G2L["45"]["MaxTextSize"] = 24;
+G2L["47"] = Instance.new("UITextSizeConstraint", G2L["46"]);
+G2L["47"]["MaxTextSize"] = 24;
 
 -- StarterGui.Banking System.BACKGROUNDUI.Deposit Icon.fluency_icon
-G2L["46"] = Instance.new("ImageLabel", G2L["44"]);
-G2L["46"]["BorderSizePixel"] = 0;
-G2L["46"]["ScaleType"] = Enum.ScaleType.Fit;
-G2L["46"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["46"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["46"]["Image"] = [[rbxassetid://11293977610]];
-G2L["46"]["Size"] = UDim2.new(0.7842140793800354, 0, 0.9932060241699219, 0);
-G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["46"]["Name"] = [[fluency_icon]];
-G2L["46"]["BackgroundTransparency"] = 1;
-G2L["46"]["Position"] = UDim2.new(0.396933376789093, 0, 0.49121224880218506, 0);
-
--- StarterGui.Banking System.BACKGROUNDUI.NAME
-G2L["47"] = Instance.new("TextLabel", G2L["2"]);
-G2L["47"]["TextWrapped"] = true;
-G2L["47"]["TextScaled"] = true;
-G2L["47"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["47"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["47"]["TextSize"] = 33;
-G2L["47"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["47"]["Size"] = UDim2.new(0.192401722073555, 0, 0.06806469708681107, 0);
-G2L["47"]["Active"] = true;
-G2L["47"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["47"]["Text"] = [[K I L L E R]];
-G2L["47"]["Name"] = [[NAME]];
-G2L["47"]["BackgroundTransparency"] = 1;
-G2L["47"]["Position"] = UDim2.new(0.008935213088989258, 0, 0.11819976568222046, 0);
-
--- StarterGui.Banking System.BACKGROUNDUI.NAME.UITextSizeConstraint
-G2L["48"] = Instance.new("UITextSizeConstraint", G2L["47"]);
-G2L["48"]["MaxTextSize"] = 19;
+G2L["48"] = Instance.new("ImageLabel", G2L["46"]);
+G2L["48"]["BorderSizePixel"] = 0;
+G2L["48"]["ScaleType"] = Enum.ScaleType.Fit;
+G2L["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["48"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["48"]["Image"] = [[rbxassetid://11293977610]];
+G2L["48"]["Size"] = UDim2.new(0.7842140793800354, 0, 0.9932060241699219, 0);
+G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["48"]["Name"] = [[fluency_icon]];
+G2L["48"]["BackgroundTransparency"] = 1;
+G2L["48"]["Position"] = UDim2.new(0.396933376789093, 0, 0.49121224880218506, 0);
 
 -- StarterGui.Banking System.BACKGROUNDUI.NAME
 G2L["49"] = Instance.new("TextLabel", G2L["2"]);
@@ -636,138 +630,158 @@ G2L["49"]["TextWrapped"] = true;
 G2L["49"]["TextScaled"] = true;
 G2L["49"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["49"]["TextSize"] = 35;
-G2L["49"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["49"]["Size"] = UDim2.new(0.192401722073555, 0, 0.10360050201416016, 0);
+G2L["49"]["TextSize"] = 33;
+G2L["49"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["49"]["Size"] = UDim2.new(0.192401722073555, 0, 0.06806469708681107, 0);
 G2L["49"]["Active"] = true;
 G2L["49"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["49"]["Text"] = [[filter]];
+G2L["49"]["Text"] = [[K I L L E R]];
 G2L["49"]["Name"] = [[NAME]];
 G2L["49"]["BackgroundTransparency"] = 1;
-G2L["49"]["Position"] = UDim2.new(0.01030915230512619, 0, 0.038927529007196426, 0);
+G2L["49"]["Position"] = UDim2.new(0.008935213088989258, 0, 0.11819976568222046, 0);
 
 -- StarterGui.Banking System.BACKGROUNDUI.NAME.UITextSizeConstraint
 G2L["4a"] = Instance.new("UITextSizeConstraint", G2L["49"]);
-G2L["4a"]["MaxTextSize"] = 29;
+G2L["4a"]["MaxTextSize"] = 19;
+
+-- StarterGui.Banking System.BACKGROUNDUI.NAME
+G2L["4b"] = Instance.new("TextLabel", G2L["2"]);
+G2L["4b"]["TextWrapped"] = true;
+G2L["4b"]["TextScaled"] = true;
+G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4b"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["4b"]["TextSize"] = 35;
+G2L["4b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4b"]["Size"] = UDim2.new(0.192401722073555, 0, 0.10360050201416016, 0);
+G2L["4b"]["Active"] = true;
+G2L["4b"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["4b"]["Text"] = [[filter]];
+G2L["4b"]["Name"] = [[NAME]];
+G2L["4b"]["BackgroundTransparency"] = 1;
+G2L["4b"]["Position"] = UDim2.new(0.01030915230512619, 0, 0.038927529007196426, 0);
+
+-- StarterGui.Banking System.BACKGROUNDUI.NAME.UITextSizeConstraint
+G2L["4c"] = Instance.new("UITextSizeConstraint", G2L["4b"]);
+G2L["4c"]["MaxTextSize"] = 29;
 
 -- StarterGui.Banking System.BACKGROUNDUI.NAME.LocalScript
-G2L["4b"] = Instance.new("LocalScript", G2L["49"]);
+G2L["4d"] = Instance.new("LocalScript", G2L["4b"]);
 
 
 -- StarterGui.Banking System.BACKGROUNDUI.Transaction Icon
-G2L["4c"] = Instance.new("TextLabel", G2L["2"]);
-G2L["4c"]["TextWrapped"] = true;
-G2L["4c"]["TextScaled"] = true;
-G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4c"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4c"]["TextSize"] = 30;
-G2L["4c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4c"]["Size"] = UDim2.new(0.04947468265891075, 0, 0.08426939696073532, 0);
-G2L["4c"]["Active"] = true;
-G2L["4c"]["Text"] = [[]];
-G2L["4c"]["Name"] = [[Transaction Icon]];
-G2L["4c"]["BackgroundTransparency"] = 1;
-G2L["4c"]["Position"] = UDim2.new(0.01566636562347412, 0, 0.5508822202682495, 0);
+G2L["4e"] = Instance.new("TextLabel", G2L["2"]);
+G2L["4e"]["TextWrapped"] = true;
+G2L["4e"]["TextScaled"] = true;
+G2L["4e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4e"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4e"]["TextSize"] = 30;
+G2L["4e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4e"]["Size"] = UDim2.new(0.04947468265891075, 0, 0.08426939696073532, 0);
+G2L["4e"]["Active"] = true;
+G2L["4e"]["Text"] = [[]];
+G2L["4e"]["Name"] = [[Transaction Icon]];
+G2L["4e"]["BackgroundTransparency"] = 1;
+G2L["4e"]["Position"] = UDim2.new(0.01566636562347412, 0, 0.5508822202682495, 0);
 
 -- StarterGui.Banking System.BACKGROUNDUI.Transaction Icon.UITextSizeConstraint
-G2L["4d"] = Instance.new("UITextSizeConstraint", G2L["4c"]);
-G2L["4d"]["MaxTextSize"] = 24;
+G2L["4f"] = Instance.new("UITextSizeConstraint", G2L["4e"]);
+G2L["4f"]["MaxTextSize"] = 24;
 
 -- StarterGui.Banking System.BACKGROUNDUI.Transaction Icon.fluency_icon
-G2L["4e"] = Instance.new("ImageLabel", G2L["4c"]);
-G2L["4e"]["BorderSizePixel"] = 0;
-G2L["4e"]["ScaleType"] = Enum.ScaleType.Fit;
-G2L["4e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["4e"]["Image"] = [[rbxassetid://12974469797]];
-G2L["4e"]["Size"] = UDim2.new(0.8047499656677246, 0, 0.9932060241699219, 0);
-G2L["4e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4e"]["Name"] = [[fluency_icon]];
-G2L["4e"]["BackgroundTransparency"] = 1;
-G2L["4e"]["Position"] = UDim2.new(0.3798975944519043, 0, 0.4999995529651642, 0);
+G2L["50"] = Instance.new("ImageLabel", G2L["4e"]);
+G2L["50"]["BorderSizePixel"] = 0;
+G2L["50"]["ScaleType"] = Enum.ScaleType.Fit;
+G2L["50"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["50"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["50"]["Image"] = [[rbxassetid://12974469797]];
+G2L["50"]["Size"] = UDim2.new(0.8047499656677246, 0, 0.9932060241699219, 0);
+G2L["50"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["50"]["Name"] = [[fluency_icon]];
+G2L["50"]["BackgroundTransparency"] = 1;
+G2L["50"]["Position"] = UDim2.new(0.3798975944519043, 0, 0.4999995529651642, 0);
 
 -- StarterGui.Banking System.BACKGROUNDUI.Withdraw Icon
-G2L["4f"] = Instance.new("TextLabel", G2L["2"]);
-G2L["4f"]["TextWrapped"] = true;
-G2L["4f"]["TextScaled"] = true;
-G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4f"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4f"]["TextSize"] = 30;
-G2L["4f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4f"]["Size"] = UDim2.new(0.04947468265891075, 0, 0.08426939696073532, 0);
-G2L["4f"]["Active"] = true;
-G2L["4f"]["Text"] = [[]];
-G2L["4f"]["Name"] = [[Withdraw Icon]];
-G2L["4f"]["BackgroundTransparency"] = 1;
-G2L["4f"]["Position"] = UDim2.new(0.014936983585357666, 0, 0.8640705347061157, 0);
+G2L["51"] = Instance.new("TextLabel", G2L["2"]);
+G2L["51"]["TextWrapped"] = true;
+G2L["51"]["TextScaled"] = true;
+G2L["51"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["51"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["51"]["TextSize"] = 30;
+G2L["51"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["51"]["Size"] = UDim2.new(0.04947468265891075, 0, 0.08426939696073532, 0);
+G2L["51"]["Active"] = true;
+G2L["51"]["Text"] = [[]];
+G2L["51"]["Name"] = [[Withdraw Icon]];
+G2L["51"]["BackgroundTransparency"] = 1;
+G2L["51"]["Position"] = UDim2.new(0.014936983585357666, 0, 0.8640705347061157, 0);
 
 -- StarterGui.Banking System.BACKGROUNDUI.Withdraw Icon.UITextSizeConstraint
-G2L["50"] = Instance.new("UITextSizeConstraint", G2L["4f"]);
-G2L["50"]["MaxTextSize"] = 24;
+G2L["52"] = Instance.new("UITextSizeConstraint", G2L["51"]);
+G2L["52"]["MaxTextSize"] = 24;
 
 -- StarterGui.Banking System.BACKGROUNDUI.Withdraw Icon.fluency_icon
-G2L["51"] = Instance.new("ImageLabel", G2L["4f"]);
-G2L["51"]["BorderSizePixel"] = 0;
-G2L["51"]["ScaleType"] = Enum.ScaleType.Fit;
-G2L["51"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["51"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["51"]["Image"] = [[rbxassetid://12974250071]];
-G2L["51"]["Size"] = UDim2.new(0.9013199806213379, 0, 0.9932060241699219, 0);
-G2L["51"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["51"]["Name"] = [[fluency_icon]];
-G2L["51"]["BackgroundTransparency"] = 1;
-G2L["51"]["Position"] = UDim2.new(0.36129215359687805, 0, 0.4986855089664459, 0);
+G2L["53"] = Instance.new("ImageLabel", G2L["51"]);
+G2L["53"]["BorderSizePixel"] = 0;
+G2L["53"]["ScaleType"] = Enum.ScaleType.Fit;
+G2L["53"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["53"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["53"]["Image"] = [[rbxassetid://12974250071]];
+G2L["53"]["Size"] = UDim2.new(0.9013199806213379, 0, 0.9932060241699219, 0);
+G2L["53"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["53"]["Name"] = [[fluency_icon]];
+G2L["53"]["BackgroundTransparency"] = 1;
+G2L["53"]["Position"] = UDim2.new(0.36129215359687805, 0, 0.4986855089664459, 0);
 
 -- StarterGui.Banking System.BACKGROUNDUI.Ui
-G2L["52"] = Instance.new("Frame", G2L["2"]);
-G2L["52"]["Active"] = true;
-G2L["52"]["BorderSizePixel"] = 0;
-G2L["52"]["BackgroundColor3"] = Color3.fromRGB(62, 62, 62);
-G2L["52"]["Size"] = UDim2.new(0.19782601296901703, 0, 0.005748901516199112, 0);
-G2L["52"]["BorderColor3"] = Color3.fromRGB(72, 72, 72);
-G2L["52"]["Position"] = UDim2.new(0.0059067499823868275, 0, 0.48809805512428284, 0);
-G2L["52"]["Name"] = [[Ui]];
+G2L["54"] = Instance.new("Frame", G2L["2"]);
+G2L["54"]["Active"] = true;
+G2L["54"]["BorderSizePixel"] = 0;
+G2L["54"]["BackgroundColor3"] = Color3.fromRGB(62, 62, 62);
+G2L["54"]["Size"] = UDim2.new(0.19782601296901703, 0, 0.005748901516199112, 0);
+G2L["54"]["BorderColor3"] = Color3.fromRGB(72, 72, 72);
+G2L["54"]["Position"] = UDim2.new(0.0059067499823868275, 0, 0.48809805512428284, 0);
+G2L["54"]["Name"] = [[Ui]];
 
 -- StarterGui.Banking System.BACKGROUNDUI.LocalScript
-G2L["53"] = Instance.new("LocalScript", G2L["2"]);
+G2L["55"] = Instance.new("LocalScript", G2L["2"]);
 
 
 -- StarterGui.Banking System.BACKGROUNDUI.BACKGROUND UI
-G2L["54"] = Instance.new("Frame", G2L["2"]);
-G2L["54"]["Active"] = true;
-G2L["54"]["BackgroundColor3"] = Color3.fromRGB(62, 62, 62);
-G2L["54"]["Size"] = UDim2.new(0.7599999904632568, 0, -0, 0);
-G2L["54"]["BorderColor3"] = Color3.fromRGB(62, 62, 62);
-G2L["54"]["Position"] = UDim2.new(0.2271934449672699, 0, 0.1370522528886795, 0);
-G2L["54"]["Name"] = [[BACKGROUND UI]];
+G2L["56"] = Instance.new("Frame", G2L["2"]);
+G2L["56"]["Active"] = true;
+G2L["56"]["BackgroundColor3"] = Color3.fromRGB(62, 62, 62);
+G2L["56"]["Size"] = UDim2.new(0.7599999904632568, 0, -0, 0);
+G2L["56"]["BorderColor3"] = Color3.fromRGB(62, 62, 62);
+G2L["56"]["Position"] = UDim2.new(0.2271934449672699, 0, 0.1370522528886795, 0);
+G2L["56"]["Name"] = [[BACKGROUND UI]];
 
 -- StarterGui.Banking System.reset popup
-G2L["55"] = Instance.new("Frame", G2L["1"]);
-G2L["55"]["BorderSizePixel"] = 0;
-G2L["55"]["BackgroundColor3"] = Color3.fromRGB(25, 25, 25);
-G2L["55"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["55"]["Size"] = UDim2.new(0.30000004172325134, 0, 0.06365915387868881, 0);
-G2L["55"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["55"]["Position"] = UDim2.new(0.5, 0, -0.20000000298023224, 0);
-G2L["55"]["Name"] = [[reset popup]];
+G2L["57"] = Instance.new("Frame", G2L["1"]);
+G2L["57"]["BorderSizePixel"] = 0;
+G2L["57"]["BackgroundColor3"] = Color3.fromRGB(25, 25, 25);
+G2L["57"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["57"]["Size"] = UDim2.new(0.30000004172325134, 0, 0.06365915387868881, 0);
+G2L["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["57"]["Position"] = UDim2.new(0.5, 0, -0.20000000298023224, 0);
+G2L["57"]["Name"] = [[reset popup]];
 
 -- StarterGui.Banking System.reset popup.TextLabel
-G2L["56"] = Instance.new("TextLabel", G2L["55"]);
-G2L["56"]["TextWrapped"] = true;
-G2L["56"]["BorderSizePixel"] = 0;
-G2L["56"]["TextScaled"] = true;
-G2L["56"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["56"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["56"]["TextSize"] = 14;
-G2L["56"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["56"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["56"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["56"]["Text"] = [[Filter Reset!]];
-G2L["56"]["BackgroundTransparency"] = 1;
+G2L["58"] = Instance.new("TextLabel", G2L["57"]);
+G2L["58"]["TextWrapped"] = true;
+G2L["58"]["BorderSizePixel"] = 0;
+G2L["58"]["TextScaled"] = true;
+G2L["58"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["58"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["58"]["TextSize"] = 14;
+G2L["58"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["58"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["58"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["58"]["Text"] = [[Filter Reset!]];
+G2L["58"]["BackgroundTransparency"] = 1;
 
 -- StarterGui.Banking System.reset popup.TextLabel.UITextSizeConstraint
-G2L["57"] = Instance.new("UITextSizeConstraint", G2L["56"]);
-G2L["57"]["MaxTextSize"] = 14;
+G2L["59"] = Instance.new("UITextSizeConstraint", G2L["58"]);
+G2L["59"]["MaxTextSize"] = 14;
 
 -- StarterGui.Banking System.BACKGROUNDUI.InformationFrame.LocalScript
 local function C_c()
@@ -831,8 +845,8 @@ local script = G2L["18"];
 end;
 task.spawn(C_18);
 -- StarterGui.Banking System.BACKGROUNDUI.NAME.LocalScript
-local function C_4b()
-local script = G2L["4b"];
+local function C_4d()
+local script = G2L["4d"];
 	while true do
 		script.Parent.TextColor3 = Color3.new(255/255,0/255,0/255)
 		for i = 0,255,10 do
@@ -861,10 +875,10 @@ local script = G2L["4b"];
 		end
 	end
 end;
-task.spawn(C_4b);
+task.spawn(C_4d);
 -- StarterGui.Banking System.BACKGROUNDUI.LocalScript
-local function C_53()
-local script = G2L["53"];
+local function C_55()
+local script = G2L["55"];
 	local ts = game:GetService("TweenService")
 	local tcs = game:GetService("TextChatService")
 	local rstorage = game:GetService("ReplicatedStorage")
@@ -1060,6 +1074,6 @@ local script = G2L["53"];
 		end
 	end)
 end;
-task.spawn(C_53);
+task.spawn(C_55);
 
 return G2L["1"], require;
