@@ -11,7 +11,7 @@
 local G2L = {};
 
 -- StarterGui.Banking System
-G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"));
 G2L["1"]["DisplayOrder"] = 999;
 G2L["1"]["Name"] = [[Banking System]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
@@ -197,7 +197,6 @@ G2L["19"]["AspectRatio"] = 1.4134896993637085;
 
 -- StarterGui.Banking System.BACKGROUNDUI.TransactionFrame.textbox
 G2L["1a"] = Instance.new("TextBox", G2L["15"]);
-G2L["1a"]["CursorPosition"] = -1;
 G2L["1a"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1a"]["BorderSizePixel"] = 0;
 G2L["1a"]["TextSize"] = 14;
@@ -952,17 +951,28 @@ local script = G2L["53"];
 		end
 	end
 	
+	local RNG = function(Length)
+		local Chars = {}
+		for i=97,122 do Chars[#Chars+1]=string.char(i) end
+		for i=65,90 do Chars[#Chars+1]=string.char(i) end
+	
+		local Str = ""
+		for i = 1, Length do
+			Str = Str .. Chars[math.random(#Chars)]
+		end
+		return Str
+	end
+	
 	local resetfilter = function()
 		task.spawn(function()
-			local ez = math.random(10000000, 99999999) .. " reset filter lol"
 			if tcs.ChatVersion == Enum.ChatVersion.TextChatService then
 				local Channel = tcs.TextChannels.RBXGeneral
 				for i = 1, 5 do
-					Channel:SendAsync("/e " .. ez)
+					Channel:SendAsync("/e " .. RNG(i) .. " filter reset")
 				end
 			else
 				for i = 1, 5 do
-					plrs:Chat(ez)
+					plrs:Chat(RNG(i) .. " filter reset")
 				end
 			end
 		end)
