@@ -11,7 +11,7 @@
 local G2L = {};
 
 -- StarterGui.Banking System
-G2L["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"));
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["DisplayOrder"] = 999;
 G2L["1"]["Name"] = [[Banking System]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
@@ -22,9 +22,9 @@ G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["Active"] = true;
 G2L["2"]["BorderSizePixel"] = 0;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(25, 25, 25);
-G2L["2"]["Size"] = UDim2.new(0.40615007281303406, 0, 0.5090574622154236, 0);
+G2L["2"]["Size"] = UDim2.new(0.3108968734741211, 0, 0.3896697163581848, 0);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["2"]["Position"] = UDim2.new(0.2964330017566681, 0, 0.24479804933071136, 0);
+G2L["2"]["Position"] = UDim2.new(0.6813878417015076, 0, 0.5927572250366211, 0);
 G2L["2"]["Name"] = [[BACKGROUNDUI]];
 
 -- StarterGui.Banking System.BACKGROUNDUI.Ui
