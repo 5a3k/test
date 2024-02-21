@@ -276,6 +276,7 @@ window:Box("Big Letters", function(text, focuslost)
 		end
 		for _, line in next, comb do
 			chat(line)
+			wait()
 		end
 	end
 end)
